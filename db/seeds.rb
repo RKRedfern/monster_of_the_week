@@ -6,5 +6,5 @@
 #   
 #   Character.create(name: 'Luke', movie: movies.first)
 
-tooms = Monster.create(name: "Eugene Victor Tooms", description: "Genetic mutant serial killer who was capable of squeezing his body through narrow gaps.", episode: 3, likes: 0, dislikes: 0)
+tooms = Monster.create(name: "Eugene Victor Tooms", description: "Genetic mutant serial killer who was capable of squeezing his body through narrow gaps.", image_url: "http://multiversitystatic.s3.amazonaws.com/uploads/2017/10/the-x-files-tooms-featured-1000x700.jpg", likes: 0, dislikes: 0, rarity: 100)
 
