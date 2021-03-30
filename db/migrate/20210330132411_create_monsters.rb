@@ -5,9 +5,9 @@ class CreateMonsters < ActiveRecord::Migration[6.1]
       t.string :description
       t.string :image_url
       t.integer :rarity
-      t.boolean :favorite
-      t.integer :category_id
-      t.integer :user_id
+      t.boolean :fav
+      t.references :user, null: false, foreign_key: true
+      t.references :category, null: false, foreign_key: true
       t.timestamps
     end
   end
