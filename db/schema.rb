@@ -10,18 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_26_201049) do
+ActiveRecord::Schema.define(version: 2021_03_29_164425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "monsters", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "image_url"
-    t.bigint "likes"
-    t.bigint "dislikes"
-    t.bigint "rarity"
+    t.integer "rarity"
+    t.boolean "favorite"
+    t.integer "category_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -30,13 +37,6 @@ ActiveRecord::Schema.define(version: 2021_03_26_201049) do
     t.string "name"
     t.string "title"
     t.string "image_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "usersmonsters", force: :cascade do |t|
-    t.bigint "monster_id", null: false
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

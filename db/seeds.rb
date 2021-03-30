@@ -6,6 +6,8 @@
 #   
 #   Character.create(name: 'Luke', movie: movies.first)
 
-tooms = Monster.create(name: "Eugene Victor Tooms", description: "Genetic mutant serial killer who was capable of squeezing his body through narrow gaps.", image_url: "", likes: 0, dislikes: 0, rarity: 100)
+tooms = Monster.create(name: "Eugene Victor Tooms", description: "Genetic mutant serial killer who was capable of squeezing his body through narrow gaps.", image_url: "", rarity: 100, user_id: 1, favorite: false, category_id: 1)
 
 scully = User.create(name: "Agent Dana Scully", title: "FBI Agent, MD", image_url: "")
+
+humanoid = Category.create(name: "Humanoid")

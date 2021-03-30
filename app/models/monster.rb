@@ -1,4 +1,5 @@
 class Monster < ApplicationRecord
-    has_many :usersmonsters
-    has_many :users, through: :usersmonster
+    belongs_to :users
+    belongs_to :category
+    
 end
