@@ -5,4 +5,10 @@ class Api::V1::MonstersController < ApplicationController
         render json: MonsterSerializer.new(monsters)
     end
 
+    def update
+        monster = Monster.find_by_id(params[:id])
+        monster.toggle! :fav
+        
+    end
+
 end
