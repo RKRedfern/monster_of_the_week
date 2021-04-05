@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do
       resources :monsters, only: [:index, :update]
-      resources :users
+        resources :users do
+          resources :monsters
+      end
     end
   end
 end
