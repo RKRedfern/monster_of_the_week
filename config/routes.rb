@@ -2,11 +2,19 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   namespace :api do 
+
     namespace :v1 do
+
       resources :monsters, only: [:index, :update, :show]
-        resources :users do
-          resources :monsters
+        
+      resources :users do
+        resources :monsters
       end
-    end
+      
+      resources :categories
+      
+      end
+
   end
+
 end
