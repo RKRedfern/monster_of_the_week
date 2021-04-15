@@ -1,24 +1,6 @@
 # README
+This program was created using a Rails back-end and the PostGres Database Gem. The link to the backend file can be accessed here : https://github.com/RKRedfern/monster_of_the_week_front_end
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This program can be started by cloning both repositories, using bundle install, running < rails s > in the back-end console and running < open index.html > in the front end console.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project is the first version of an X files trading card game with a custom curated database of our favorite X Files monsters. 
